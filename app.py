@@ -13,4 +13,4 @@ def DisplayData(command):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run('10.0.151.251', 7545)
