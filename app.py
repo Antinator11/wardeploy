@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 
 
-@app.route('/')
+@app.route('/fun')
 def DisplayData():
     with open('data.txt', 'r') as data:
         return data.read()
