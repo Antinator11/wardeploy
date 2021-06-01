@@ -4,10 +4,12 @@ app = Flask(__name__)
 
 
 
-@app.route('/fun')
-def DisplayData():
-    with open('data.txt', 'r') as data:
-        return data.read()
+@app.route('/fun/command')
+def DisplayData(command):
+    import subprocess
+    test = subprocess.Popen([command], stdout=subprocess.PIPE)
+    output = test.communicate()[0]
+    return output
 
 
 
