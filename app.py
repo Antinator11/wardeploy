@@ -10,7 +10,12 @@ def DisplayData(command):
     test = subprocess.run(listcom, capture_output=True)
     return str(test)
 
+@app.route('/')
+def Hello():
+    return 'Hello World'
+
+
 
 
 if __name__ == '__main__':
-    app.run('10.0.151.251', 7545)
+    app.run(host='0.0.0.0')
